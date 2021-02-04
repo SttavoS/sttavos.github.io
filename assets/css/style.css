@@ -1,0 +1,78 @@
+:root {
+    --gunmetal: #222831;
+    --charcoal: #393E46;
+    --independence: #485466;
+    --y-in-mn-blue: #2F4B78;
+    --bdazzled-blue: #476085;
+    --flame: #D65A31;
+    --cultured: #EEEEEE;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gradient {
+    background: linear-gradient(
+        45deg,
+        var(--gunmetal),
+        var(--charcoal),
+        var(--independence),
+        var(--y-in-mn-blue),
+        var(--bdazzled-blue)
+    );
+    background-size: 300% 300%;
+    animation: colors 15s ease infinite;
+}
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h1, h2 {
+    font-family: Inter;
+    font-weight: bold;
+    text-align: center;
+    color: var(--cultured);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+main h1 {
+    font-size: max(48px, 3.83vw);
+    border: 5px solid var(--cultured);
+    padding: 10px 50px;
+}
+
+main h2 {
+    /* font-size: 36px; */
+    font-size: max(36px, 1.9vw);
+    margin-top: 30px;
+}
+
+.icons-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+}
+
+.icon {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
