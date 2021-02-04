@@ -72,7 +72,18 @@ main h2 {
     margin-right: -0.5rem;
 }
 
-.icon {
+.icon-link {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+}
+
+.icon {
+    fill: currentColor;
+    /* height: 1.5rem;
+    width: 1.5rem; */
+    color: #d2d6dc;
+}
+
+.icon:hover {
+    color: #6b7280;
 }
