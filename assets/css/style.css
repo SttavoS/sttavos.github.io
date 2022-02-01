@@ -8,6 +8,10 @@
     --cultured: #EEEEEE;
 }
 
+::selection {
+    background-color: var(--bdazzled-blue);
+}
+
 main {
     width: 100vw;
     height: 100vh;
@@ -53,14 +57,13 @@ h1, h2 {
 }
 
 main h1 {
-    font-size: max(48px, 3.83vw);
+    font-size: max(36px, 5vw);
     border: 5px solid var(--cultured);
     padding: 10px 50px;
 }
 
 main h2 {
-    /* font-size: 36px; */
-    font-size: max(36px, 1.9vw);
+    font-size: max(24px, 2.5vw);
     margin-top: 30px;
 }
 
@@ -79,9 +82,15 @@ main h2 {
 
 .icon {
     fill: currentColor;
-    color: #d2d6dc;
+    color: var(--cultured);
 }
 
 .icon:hover {
-    color: #6b7280;
+    filter: brightness(75%);
+}
+
+@media screen and (max-width: 768px) {
+    main h1 {
+        padding: 10px 20px;
+    }
 }
