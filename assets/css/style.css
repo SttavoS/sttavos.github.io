@@ -58,7 +58,7 @@ h1, h2 {
 
 main h1 {
     font-size: max(36px, 5vw);
-    border: 5px solid var(--cultured);
+    /* border: 5px solid var(--cultured); */
     padding: 10px 50px;
 }
 
@@ -66,6 +66,54 @@ main h2 {
     font-size: max(24px, 2.5vw);
     margin-top: 30px;
 }
+
+.draw-border {
+    box-shadow: inset 0 0 0 5px var(--cultured);
+    color: var(--cultured);
+    transition: color 0.25s 0.0833333333s;
+    position: relative;
+}
+
+.draw-border::before, .draw-border::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.draw-border::before {
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+}
+
+.draw-border::after {
+    border-top-width: 5px;
+    border-right-width: 5px;
+}
+
+.draw-border:hover {
+    color: var(--flame);
+}
+.draw-border:hover::before, .draw-border:hover::after {
+    border-color: var(--flame);
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+}
+
+.draw-border:hover::before {
+    transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw-border:hover::after {
+    transition-delay: 0s, 0.25s, 0s;
+}
+
 
 .icons-wrapper {
     display: flex;
